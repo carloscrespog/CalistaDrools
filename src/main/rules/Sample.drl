@@ -11,7 +11,7 @@ declare Event
 	@role(event)
 end
  
-rule "HelloWorld"
+rule "Event Received"
 	when
 		$newEvent: Event() from entry-point entrada
 		
@@ -20,7 +20,7 @@ rule "HelloWorld"
 end
 
 
-rule "Example" 
+rule "Light On" 
 	when 
 		$newEvent0: Event(title=="light",value<1000) from entry-point entrada 
 
@@ -30,12 +30,31 @@ rule "Example"
 		
 end
 
-rule "Example2"
+rule "Bot"
 	when 
 		$newEvent: Event(title=="light_on")
 	then
-		Bot bot = new Bot();
-		bot.send("hola");
-        //globalBot.send("ola k ase");
-		System.out.println("Welcome");
+
+        botFunction();
+		System.out.println("Rule bot triggered");
 end 
+
+rule "Twitter"
+	when 
+		$newEvent: Event(title=="light_on")
+	then
+
+        twitterFunction();
+		System.out.println("Rule twitter triggered");
+end 
+
+
+function twitterFunction(){
+		Twitter twitter =new Twitter();
+		twitter.send(" @pmoncadaisla acaba de entrar al laboratorio");
+}
+function botFunction(){
+		Bot bot = new Bot();
+		bot.send("Bienvenido al gsi ");
+
+}

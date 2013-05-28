@@ -16,11 +16,11 @@
     <j.0:accountName>my user</j.0:accountName>
   </rdf:Description>
   <rdf:Description rdf:about="ewe:Event">
-    <j.2:description>		$newEvent: Event() from entry-point entrada</j.2:description>
+    <j.2:description>		$newEvent: Event(title=="light_on")</j.2:description>
     <j.2:title>Event title</j.2:title>
   </rdf:Description>
   <rdf:Description rdf:about="ewe:Action">
-    <j.2:description>		System.out.println("New Event received from: "+$newEvent.getTitle() );</j.2:description>
+    <j.2:description>		System.out.println("Rule twitter triggered");</j.2:description>
     <j.2:title>Action Title</j.2:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.gsi.dit.upm.es/ontologies/ewe#Rule">
@@ -28,6 +28,6 @@
     <j.1:timesUsed>0</j.1:timesUsed>
     <j.1:pageURL>my pageURL</j.1:pageURL>
     <j.2:description>my description</j.2:description>
-    <j.2:title>HelloWorld</j.2:title>
+    <j.2:title>Twitter</j.2:title>
   </rdf:Description>
 </rdf:RDF>

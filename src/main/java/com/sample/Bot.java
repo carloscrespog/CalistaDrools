@@ -15,7 +15,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 
 public class Bot {
-	static final String URL_BOT="http://localhost:3000/bot";
+	static final String URL_BOT="http://192.168.1.116:3000/bot";
 	
 	public void send(String message){
 		HttpClient httpclient = new DefaultHttpClient();

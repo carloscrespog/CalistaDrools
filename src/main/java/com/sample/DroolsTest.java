@@ -40,8 +40,8 @@ public class DroolsTest {
         	Bot bot = new Bot();
         	bot.send("Bienvenido");
         		
-        	Twitter tw =new Twitter();
-        	tw.send("ola k ase @carloscrespog");
+        	//Twitter tw =new Twitter();
+        	//tw.send("ola k ase @carloscrespog");
             kbase = readKnowledgeBase();
             
            
@@ -104,10 +104,7 @@ public class DroolsTest {
         }
         KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
         
-        PackageBuilder builder = new PackageBuilder();
-        builder.addPackageFromDrl(ResourceFactory.newClassPathResource("Sample.drl"));
-        rulebase = RuleBaseFactory.newRuleBase();
-        rulebase.addPackage(builder.getPackage());
+
 //        Collection<KnowledgePackage> c = kbuilder.getKnowledgePackages();
 //        KnowledgePackage k = c.iterator().next();
 //        Collection<Rule> rules = k.getRules();
