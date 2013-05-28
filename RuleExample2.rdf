@@ -1,0 +1,33 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://xmlns.com/foaf/0.1/"
+    xmlns:j.1="ewe:"
+    xmlns:j.2="http://purl.org/dc/terms/" > 
+  <rdf:Description rdf:about="ewe:Service">
+    <j.1:providesAction rdf:resource="ewe:Action"/>
+    <j.1:generatesEvent rdf:resource="ewe:Event"/>
+    <j.0:logo>my logo</j.0:logo>
+    <j.2:title>Drools</j.2:title>
+    <j.2:description>my description</j.2:description>
+    <j.1:pageURL>my pageURL</j.1:pageURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="ewe:hasCreator">
+    <j.1:hasActiveService rdf:resource="ewe:Service"/>
+    <j.0:accountName>my user</j.0:accountName>
+  </rdf:Description>
+  <rdf:Description rdf:about="ewe:Event">
+    <j.2:description>		$newEvent: Event(title=="light_on")</j.2:description>
+    <j.2:title>Event title</j.2:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="ewe:Action">
+    <j.2:description>		Bot bot = new Bot();</j.2:description>
+    <j.2:title>Action Title</j.2:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.gsi.dit.upm.es/ontologies/ewe#Rule">
+    <j.1:hasCreator rdf:resource="ewe:hasCreator"/>
+    <j.1:timesUsed>0</j.1:timesUsed>
+    <j.1:pageURL>my pageURL</j.1:pageURL>
+    <j.2:description>my description</j.2:description>
+    <j.2:title>Example2</j.2:title>
+  </rdf:Description>
+</rdf:RDF>

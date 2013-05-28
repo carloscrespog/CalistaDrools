@@ -1,0 +1,41 @@
+package com.sample
+ 
+ import com.sample.model.Event;
+ import com.sample.Bot;
+//global com.sample.Bot globalBot;
+declare Bot
+	
+end
+
+declare Event
+	@role(event)
+end
+ 
+rule "HelloWorld"
+	when
+		$newEvent: Event() from entry-point entrada
+		
+	then
+		System.out.println("New Event received from: "+$newEvent.getTitle() );
+end
+
+
+rule "Example" 
+	when 
+		$newEvent0: Event(title=="light",value<1000) from entry-point entrada 
+
+	then 
+		System.out.println("Light on"); 
+		insert(new Event("light_on",1));
+		
+end
+
+rule "Example2"
+	when 
+		$newEvent: Event(title=="light_on")
+	then
+		Bot bot = new Bot();
+		bot.send("hola");
+        //globalBot.send("ola k ase");
+		System.out.println("Welcome");
+end 
